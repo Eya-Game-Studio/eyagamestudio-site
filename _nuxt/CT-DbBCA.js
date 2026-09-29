@@ -1,0 +1,1 @@
+import{_ as o}from"./iWQaMqFH.js";import{u as e,c as a,a as _,o as s}from"./CScb3pnB.js";import"./DlAUqK2U.js";const c={class:"pt-20"},d={__name:"about",setup(n){return e({title:"Hakkımızda"}),(r,m)=>{const t=o;return s(),a("div",c,[_(t)])}}};export{d as default};

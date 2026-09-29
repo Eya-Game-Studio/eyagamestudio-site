@@ -1,0 +1,1 @@
+import{_ as t}from"./CUlY6Bcz.js";import{u as a,c as o,a as s,o as c}from"./CScb3pnB.js";import"./BuBOwwdI.js";const _={class:"pt-20"},u={__name:"index",setup(n){return a({title:"Oyunlarımız"}),(r,m)=>{const e=t;return c(),o("div",_,[s(e)])}}};export{u as default};

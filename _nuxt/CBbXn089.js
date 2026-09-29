@@ -1,0 +1,1 @@
+import{_ as e}from"./Db5bDVp4.js";import{u as o,c as a,a as c,o as s}from"./CScb3pnB.js";const _={class:"pt-20"},l={__name:"contact",setup(n){return o({title:"İletişim"}),(r,m)=>{const t=e;return s(),a("div",_,[c(t)])}}};export{l as default};

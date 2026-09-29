@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+  <html  lang="tr">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>
+        Metius2 - EYA Game Studio
+      </title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap">
+      <link rel="stylesheet" href="/_nuxt/entry.gsQC4TxQ.css?v=eya20260803b" crossorigin>
+      <meta name="description" content="Professional game development studio creating innovative and engaging gaming experiences.">
+      <meta name="keywords" content="game studio, game development, indie games, gaming">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="EYA Game Studio">
+      <meta property="og:description" content="Professional game development studio creating innovative gaming experiences.">
+      <meta property="og:image" content="https://eyagamestudio.com/logo.jpeg">
+      <link rel="icon" type="image/jpeg" href="/logo.jpeg">
+      <script>"use strict";(()=>{const t=window,e=document.documentElement,c=["dark","light"],n=getStorageValue("localStorage","nuxt-color-mode")||"system";let i=n==="system"?u():n;const r=e.getAttribute("data-color-mode-forced");r&&(i=r),l(i),t["__NUXT_COLOR_MODE__"]={preference:n,value:i,getColorScheme:u,addColorScheme:l,removeColorScheme:d};function l(o){const s=""+o+"",a="";e.classList?e.classList.add(s):e.className+=" "+s,a&&e.setAttribute("data-"+a,o)}function d(o){const s=""+o+"",a="";e.classList?e.classList.remove(s):e.className=e.className.replace(new RegExp(s,"g"),""),a&&e.removeAttribute("data-"+a)}function f(o){return t.matchMedia("(prefers-color-scheme"+o+")")}function u(){if(t.matchMedia&&f("").media!=="not all"){for(const o of c)if(f(":"+o).matches)return o}return"dark"}})();function getStorageValue(t,e){switch(t){case"localStorage":return window.localStorage.getItem(e);case"sessionStorage":return window.sessionStorage.getItem(e);case"cookie":return getCookie(e);default:return null}}function getCookie(t){const c=("; "+window.document.cookie).split("; "+t+"=");if(c.length===2)return c.pop()?.split(";").shift()}</script>
+      <style id="metius2-route-fix">#__nuxt .pt-20>section:first-child{min-height:560px!important;display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;overflow:hidden!important;background-color:#020617!important;color:#fff!important;padding:80px 24px!important;position:relative!important}#__nuxt .pt-20>section:first-child::before{content:''!important;position:absolute!important;inset:-20px!important;background:url('/media/Logo_img.png') center/cover no-repeat!important;filter:blur(12px)!important;opacity:0.4!important;z-index:0!important;pointer-events:none!important}#__nuxt .pt-20>section:first-child>div{position:relative!important;z-index:1!important}#__nuxt .pt-20>section:first-child h1{margin:0 0 28px!important;font-family:Poppins,Inter,sans-serif!important;font-size:clamp(64px,7vw,96px)!important;line-height:1!important;font-weight:800!important;color:#fff!important;text-shadow:0 4px 20px rgba(0,0,0,0.5)!important}#__nuxt .pt-20>section:first-child p{max-width:900px!important;margin:0 auto 34px!important;color:#fff!important;font-size:clamp(24px,2.2vw,34px)!important;line-height:1.35!important;text-shadow:0 2px 10px rgba(0,0,0,0.5)!important}</style>
+    </head>
+    <body>
+      <div id="__nuxt">
+        <div class="min-h-screen">
+          <nav class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
+            <div class="container-custom">
+              <div class="flex items-center justify-between h-20">
+                <a href="/" class="flex items-center space-x-2">
+                  <img src="/logo.jpeg" alt="EYA Game Studio" class="h-24 w-24 rounded-lg object-contain drop-shadow-[0_0_8px_rgba(255,255,255,1)] drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]" width="96" height="96">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                  <!--[-->
+                  <a href="/" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium">
+                    Ana Sayfa
+                  </a>
+                  <a href="/about" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium">
+                    Hakkımızda
+                  </a>
+                  <a aria-current="page" href="/games" class="text-primary-600 dark:text-primary-400 font-bold router-link-exact-active text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium">
+                    Oyunlarımız
+                  </a>
+                  <a href="/contact" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium">
+                    İletişim
+                  </a>
+                  <!--]-->
+                </div>
+                <div class="flex items-center gap-3">
+                  <button class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" aria-label="Tema Değiştir" title="Tema Değiştir">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                      </path>
+                    </svg>
+                  </button>
+                  <div class="relative">
+                    <button class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors flex items-center gap-2" aria-label="Dil Değiştir">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129">
+                        </path>
+                      </svg>
+                      <span class="text-sm font-medium uppercase">
+                        tr
+                      </span>
+                    </button>
+                    <!---->
+                  </div>
+                  <button class="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                      </path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!---->
+            </div>
+          </nav>
+          <!--[-->
+          <div class="pt-20">
+            <section>
+              <div class="container-custom">
+                <h1 style="margin:0 0 28px;font-family:Poppins,Inter,sans-serif;font-size:clamp(64px,7vw,96px);line-height:1;font-weight:800;color:#fff;">
+                  Metius2
+                </h1>
+                <p style="max-width:900px;margin:0 auto 34px;color:#fff;font-size:clamp(24px,2.2vw,34px);line-height:1.35;">
+                  Kendinizi efsanevi bir maceranın içinde bulun. Metius2, sizi antik dünyaların gizemlerini keşfetmeye çağırıyor.
+                </p>
+                <a href="http://metius2.com/" target="_blank" rel="noopener" class="btn btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-primary-500/30">
+                  Şimdi Oyna
+                </a>
+              </div>
+            </section>
+            <section class="section">
+              <div class="container-custom">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                  <div class="animate-slide-right">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+                      Destansı Bir Hikaye
+                    </h2>
+                    <div class="prose dark:prose-invert text-gray-600 dark:text-gray-300">
+                      <p class="mb-4 text-lg leading-relaxed">
+                        Binlerce yıl önce, üç krallık arasında süregelen savaş dünyayı kaosa sürükledi. Ejderhaların uyanışı ve karanlık güçlerin yükselişiyle, dengeyi yeniden kuracak kahramanlara ihtiyaç var.
+                      </p>
+                      <p class="text-lg leading-relaxed">
+                        Kendi kaderini çiz, müttefikler edin ve krallığını zafere taşı. Metius2'de her seçim, bu destansı hikayenin gidişatını değiştirecek.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="bg-gray-200 dark:bg-gray-800 h-80 rounded-2xl animate-scale-in overflow-hidden flex items-center justify-center">
+                    <picture>
+                      <source srcset="/media/story-illustration.webp" type="image/webp">
+                      <img src="/media/story-illustration.webp" alt="Metius2 hikaye görseli" class="w-full h-full object-cover" onerror="this.closest('.bg-gray-200,.dark\:bg-gray-800')?.classList.add('hidden');">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section" style="overflow:hidden;">
+              <div class="container-custom">
+                <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">
+                  Oyundan Kareler
+                </h2>
+              </div>
+              <!-- Auto-scrolling Gallery -->
+              <style>
+                .gallery-carousel {
+                  position: relative;
+                  width: 100%;
+                  overflow: hidden;
+                  padding: 0 0 20px 0;
+                }
+                .gallery-track {
+                  display: flex;
+                  gap: 20px;
+                  animation: gallery-scroll 40s linear infinite;
+                  width: max-content;
+                }
+                .gallery-track:hover {
+                  animation-play-state: paused;
+                }
+                .gallery-slide {
+                  flex-shrink: 0;
+                  width: 420px;
+                  aspect-ratio: 16/9;
+                  border-radius: 16px;
+                  overflow: hidden;
+                  position: relative;
+                  cursor: pointer;
+                  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+                  transition: transform 0.4s ease, box-shadow 0.4s ease;
+                }
+                .gallery-slide:hover {
+                  transform: scale(1.05);
+                  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+                }
+                .gallery-slide img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  transition: transform 0.6s ease;
+                }
+                .gallery-slide:hover img {
+                  transform: scale(1.1);
+                }
+
+                @keyframes gallery-scroll {
+                  0% { transform: translateX(0); }
+                  100% { transform: translateX(-50%); }
+                }
+                /* Fade edges */
+                .gallery-carousel::before,
+                .gallery-carousel::after {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  bottom: 20px;
+                  width: 80px;
+                  z-index: 2;
+                  pointer-events: none;
+                }
+                .gallery-carousel::before {
+                  left: 0;
+                  background: linear-gradient(to right, var(--gallery-bg, #f9fafb), transparent);
+                }
+                .gallery-carousel::after {
+                  right: 0;
+                  background: linear-gradient(to left, var(--gallery-bg, #f9fafb), transparent);
+                }
+                .dark .gallery-carousel::before {
+                  background: linear-gradient(to right, #1f2937, transparent);
+                }
+                .dark .gallery-carousel::after {
+                  background: linear-gradient(to left, #1f2937, transparent);
+                }
+
+                @media (max-width: 640px) {
+                  .gallery-slide {
+                    width: 300px;
+                  }
+                }
+              </style>
+              <div class="gallery-carousel">
+                <div class="gallery-track" id="galleryTrack">
+                  <!-- Original 8 images -->
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel1.jpg" alt="Metius2 oyun görseli 1" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel2.jpg" alt="Metius2 oyun görseli 2" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel3.jpg" alt="Metius2 oyun görseli 3" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel4.jpg" alt="Metius2 oyun görseli 4" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel5.jpg" alt="Metius2 oyun görseli 5" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel6.jpg" alt="Metius2 oyun görseli 6" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel7.jpg" alt="Metius2 oyun görseli 7" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel8.jpg" alt="Metius2 oyun görseli 8" loading="lazy">
+                  </div>
+                  <!-- Duplicated for seamless infinite loop -->
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel1.jpg" alt="Metius2 oyun görseli 1" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel2.jpg" alt="Metius2 oyun görseli 2" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel3.jpg" alt="Metius2 oyun görseli 3" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel4.jpg" alt="Metius2 oyun görseli 4" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel5.jpg" alt="Metius2 oyun görseli 5" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel6.jpg" alt="Metius2 oyun görseli 6" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel7.jpg" alt="Metius2 oyun görseli 7" loading="lazy">
+                  </div>
+                  <div class="gallery-slide">
+                    <img src="/media/gorsel8.jpg" alt="Metius2 oyun görseli 8" loading="lazy">
+                  </div>
+                </div>
+              </div>
+            </section>
+<section class="section bg-white dark:bg-gray-800">
+              <div class="container-custom">
+                <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">
+                  Geliştirme Süreci
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                  <div class="card p-6 text-center">
+                    <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                      1
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+                      Konsept & Tasarım
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                      Oyun dünyasının temellerini atarken, mitolojik unsurları modern oyun dinamikleriyle harmanladık.
+                    </p>
+                  </div>
+                  <div class="card p-6 text-center">
+                    <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                      2
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+                      Geliştirme & Kodlama
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                      Akıcı ve etkileyici bir oyun deneyimi için istemci ve sunucu tarafında performansa odaklandık.
+                    </p>
+                  </div>
+                  <div class="card p-6 text-center">
+                    <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                      3
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+                      Test & Yayınlama
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                      Oyuncu geri bildirimleriyle gelişen, güncellemelerle yaşayan bir dünya hazırlıyoruz.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+          </div>
+          <!--]-->
+          <footer class="bg-gray-900 text-gray-300 py-12">
+            <div class="container-custom">
+              <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                  <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary-600 to-accent-600 rounded-lg flex items-center justify-center">
+                      <span class="text-white font-bold text-xl">
+                        E
+                      </span>
+                    </div>
+                    <span class="text-xl font-bold font-display text-white">
+                      EYA Game Studio
+                    </span>
+                  </div>
+                  <p class="text-sm text-gray-400">
+                    EYA Game Studio olarak, yenilikçi ve etkileyici oyunlar geliştiriyor, oyuncuları unutulmaz maceralara götürüyoruz.
+                  </p>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white mb-4">
+                    Ana Sayfa
+                  </h3>
+                  <ul class="space-y-2 text-sm">
+                    <li>
+                      <a href="#home" class="hover:text-primary-400 transition-colors">
+                        Ana Sayfa
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#about" class="hover:text-primary-400 transition-colors">
+                        Hakkımızda
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#games" class="hover:text-primary-400 transition-colors">
+                        Oyunlarımız
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#team" class="hover:text-primary-400 transition-colors">
+                        Ekibimiz
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white mb-4">
+                    Yasal
+                  </h3>
+                  <ul class="space-y-2 text-sm">
+                    <li>
+                      <a href="#" class="hover:text-primary-400 transition-colors">
+                        Gizlilik Politikası
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary-400 transition-colors">
+                        Kullanım Koşulları
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white mb-4">
+                    İletişim
+                  </h3>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                      </svg>
+                      <span>
+                        eyagame@eyagamestudio.com
+                      </span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                        </path>
+                      </svg>
+                      <span>
+                        +90 531 796 18 12
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-400">
+                  © 2024 EYA BİLİŞİM YAZILIM TEKNOLOJİLERİ VE ELEKTRONİK HİZMETLER LİMİTED ŞİRKETİ. Tüm hakları saklıdır.
+                </p>
+                <div class="flex gap-3">
+                  <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="#" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://tr.linkedin.com/company/eya-game-studio" target="_blank" rel="noopener" class="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                      </path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <script id="eya-metius2-static-fix">(function(){function fix(){var root=document.querySelector('.pt-20');if(root){var heroes=[].filter.call(root.querySelectorAll('section'),function(s){return /Metius2/.test(s.textContent||'')&&s.querySelector('h1')});heroes.slice(1).forEach(function(s){s.remove()});}document.querySelectorAll('nav a').forEach(function(a){var href=a.getAttribute('href')||'';a.classList.remove('router-link-exact-active');a.removeAttribute('aria-current');if(href==='/games'){a.classList.add('text-primary-600','dark:text-primary-400','font-bold','router-link-exact-active');a.setAttribute('aria-current','page');}});}document.addEventListener('DOMContentLoaded',fix);setTimeout(fix,80);setTimeout(fix,400);document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('button[aria-label="Tema De?i?tir"]');if(!b)return;var de=document.documentElement;var next=de.classList.contains('dark')?'light':'dark';de.classList.remove('dark','light');de.classList.add(next);try{localStorage.setItem('nuxt-color-mode',next)}catch(_){}});})();</script>
+      <!-- Lightbox implementation -->
+      <style>
+        .lightbox-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(15, 23, 42, 0.95);
+          backdrop-filter: blur(8px);
+          z-index: 99999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.3s ease;
+        }
+        .lightbox-overlay.active {
+          opacity: 1;
+          pointer-events: auto;
+        }
+        .lightbox-content {
+          position: relative;
+          max-width: 90vw;
+          max-height: 90vh;
+          opacity: 0;
+          transform: scale(0.9);
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .lightbox-overlay.active .lightbox-content {
+          opacity: 1;
+          transform: scale(1);
+        }
+        .lightbox-img {
+          max-width: 100%;
+          max-height: 85vh;
+          border-radius: 12px;
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+          display: block;
+        }
+        .lightbox-close {
+          position: absolute;
+          top: -48px;
+          right: -48px;
+          background: rgba(255, 255, 255, 0.1);
+          border: none;
+          color: white;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        .lightbox-close:hover {
+          background: rgba(255, 255, 255, 0.2);
+          transform: scale(1.1);
+        }
+        .lightbox-nav {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(15, 23, 42, 0.6);
+          backdrop-filter: blur(4px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          color: white;
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        .lightbox-nav:hover {
+          background: rgba(99, 102, 241, 0.8);
+          transform: translateY(-50%) scale(1.1);
+        }
+        .lightbox-prev { left: -80px; }
+        .lightbox-next { right: -80px; }
+        @media (max-width: 1024px) {
+          .lightbox-prev { left: 16px; }
+          .lightbox-next { right: 16px; }
+          .lightbox-close { top: -48px; right: 0; }
+        }
+        @media (max-width: 640px) {
+          .lightbox-img { max-height: 70vh; }
+        }
+      </style>
+      <div id="galleryLightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+          <button class="lightbox-close" onclick="closeLightbox()" title="Kapat (Esc)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+          </button>
+          <img id="lightboxImg" class="lightbox-img" src="" alt="Gallery Image">
+          <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)" title="Önceki (Sol ok)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+          </button>
+          <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)" title="Sonraki (Sağ ok)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+          </button>
+        </div>
+      </div>
+      <script>
+        let currentImageIdx = 0;
+        const galleryImages = [];
+        document.addEventListener('DOMContentLoaded', () => {
+          // Collect all original images
+          const slides = document.querySelectorAll('.gallery-track .gallery-slide');
+          for (let i = 0; i < 8; i++) {
+            if (slides[i]) {
+              const img = slides[i].querySelector('img');
+              if (img) galleryImages.push(img.src);
+            }
+          }
+          // Add click listeners to all slides (including duplicates)
+          slides.forEach(slide => {
+            slide.addEventListener('click', (e) => {
+              const imgSrc = slide.querySelector('img').src;
+              currentImageIdx = galleryImages.indexOf(imgSrc);
+              if (currentImageIdx === -1) currentImageIdx = 0;
+              openLightbox();
+            });
+          });
+        });
+
+        function openLightbox() {
+          const overlay = document.getElementById('galleryLightbox');
+          const img = document.getElementById('lightboxImg');
+          img.src = galleryImages[currentImageIdx];
+          overlay.classList.add('active');
+          document.body.style.overflow = 'hidden'; // prevent scrolling
+        }
+
+        function closeLightbox() {
+          document.getElementById('galleryLightbox').classList.remove('active');
+          document.body.style.overflow = '';
+        }
+
+        function navLightbox(direction) {
+          const img = document.getElementById('lightboxImg');
+          const content = document.querySelector('.lightbox-content');
+          
+          // Quick fade/scale effect for transition
+          content.style.opacity = '0';
+          content.style.transform = `scale(0.95) translateX(${direction * 20}px)`;
+          content.style.transition = 'all 0.15s ease-out';
+          
+          setTimeout(() => {
+            currentImageIdx = (currentImageIdx + direction + galleryImages.length) % galleryImages.length;
+            img.src = galleryImages[currentImageIdx];
+            
+            // Wait for image load before animating back in
+            img.onload = () => {
+              content.style.opacity = '1';
+              content.style.transform = 'scale(1) translateX(0)';
+              setTimeout(() => {
+                content.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+              }, 150);
+            };
+          }, 150);
+        }
+
+        // Close on backdrop click
+        document.getElementById('galleryLightbox').addEventListener('click', (e) => {
+          if (e.target === e.currentTarget) closeLightbox();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          const overlay = document.getElementById('galleryLightbox');
+          if (overlay.classList.contains('active')) {
+            if (e.key === 'Escape') closeLightbox();
+            else if (e.key === 'ArrowLeft') navLightbox(-1);
+            else if (e.key === 'ArrowRight') navLightbox(1);
+          }
+        });
+      </script>
+    <script src="/main.js"></script>
+</body>
+  </html>
